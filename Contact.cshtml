@@ -1,0 +1,27 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+<h3>Contact Form </h3>
+<div class="jumbotron">
+<form method="post" action="@Url.Action("SendMail")">
+Name : <input type="text" name="name" class="form-control" required="required"/> <br />
+E-mail : <input type="email" name="e-mail" class="form-control" required/> <br />
+Message : <textarea class="form-control" maxlength="200" tabindex="-1" required="Required"></textarea><br />
+<input class="btn btn-primary btn-block"type="button" value="Send"/>
+</form></div>
+<address>
+    Eskibağlar Mh. Prof. Dr. Yılmaz Büyükerşen Bulvarı<br />
+    No:72/19 Tepebaşı/ESKİŞEHİR<br />
+    <abbr title="Phone">P:</abbr>
+    <a href="tel:5372552481"></a>+90 537 255 24 81" <br />
+</address>
+
+<address>
+    <strong>Linkedin : </strong><a href="http://linkedin.com/in/ufukyildiz1997" target="_blank">https://linkedin.com/in/ufukyildiz1997</a>
+    <strong>Personal:</strong> <a href="mailto:ufukyildiz1997@icloud.com">Personal E-mail</a><br />
+    <strong>Commercial:</strong> <a href="mailto:hrg@piton.com.tr">Piton Ar-Ge Human Resources</a>
+</address>
